@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
+  tags = {
+    "Owner" = "Krushna Bhanage "
+  }
 }
 
 resource "azurerm_role_assignment" "role_acrpull" {
